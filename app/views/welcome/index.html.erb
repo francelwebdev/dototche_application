@@ -1,0 +1,158 @@
+<% content_for :page_title, "Accueil" %>
+
+<%= render "shareds/jumbotron" %>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 text-center mb-5">
+                <h1>Comment ça marche</h1>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center au-survole au-survole-ccm ccm">
+                    <div class="card-body py-5">
+                        <i class="fa fa-user-md fa-5x mb-3 text-primary" aria-hidden="true"></i>
+                        <p class="h6 card-title font-weight-bold text-uppercase">Trouver un médécin</p>
+                        <p>Médecin généraliste, Sage-femme, Gynécologue médical et obstétrique, etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center au-survole au-survole-ccm ccm">
+                    <div class="card-body py-5">
+                        <i class="h6 fa fa-vcard-o fa-5x mb-3 text-primary" aria-hidden="true"></i>
+                        <p class="card-title font-weight-bold text-uppercase">Consulter son profil</p>
+                        <p>Choisiser votre rendez-vous directement dans l'agenda du praticien</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center au-survole au-survole-ccm ccm">
+                    <div class="card-body py-5">
+                        <i class="h6 fa fa-calendar-check-o fa-5x mb-3 text-primary" aria-hidden="true"></i>
+                        <p class="card-title font-weight-bold text-uppercase">Prener rendez-vous</p>
+                        <p>Votre rendez-vous est pris et vous recevrez un notification SMS !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 offset-md-1 text-center mt-4">
+                <p><%= link_to "Trouver un médécin maintenant", accueil_path, class: "btn btn-primary btn-lg" %></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 text-center text-dark mb-5">
+                <h1>Médecins les plus consultés</h1>
+                <p class="lead sr-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quia?</p>
+            </div>
+
+            <div class="col-12">
+                <div class="center">
+                    <div class="card mx-1">
+                        <%= image_tag "doctor_Simple.jpg", class: "card-img-top" %>
+                        <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+                    <div class="card mx-1">
+                        <%= image_tag "-mediumlarge.jpg", class: "card-img-top" %>
+                       <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-1">
+                        <%= image_tag "doctor_Simple.jpg", class: "card-img-top" %>
+                        <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-1">
+                        <%= image_tag "-mediumlarge.jpg", class: "card-img-top" %>
+                        <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-1">
+                        <%= image_tag "doctor_Simple.jpg", class: "card-img-top" %>
+                        <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-1">
+                        <%= image_tag "-mediumlarge.jpg", class: "card-img-top" %>
+                       <div class="card-body text-center">
+                            <h5 class="card-title font-weight-bold">Dr. Watamaniuk</h5>
+                            <p class="card-text text-primary"><small>Médécin généraliste</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 text-center text-dark mb-5">
+                <h1>Trouver un medécin par ville ou spécialité</h1>
+                <p class="lead sr-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse unde eum consectetur facere blanditiis.</p>
+            </div>
+            <div class="col-md-4 offset-md-2 mb-5">
+                <div class="card">
+                    <div class="card-body text-center text-white bg-info">
+                        <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+                        <h5 class="card-title">Rechercher par ville</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Cotonou <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Abomey-Calavi <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Porto-Novo <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Parakou <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Djougou <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Bohicon <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Natitingou <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Savé <span class="badge badge-primary badge-pill">14</span></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Toutes les villes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card">
+                <div class="card-body text-center text-white bg-info">
+                    <i class="fa fa-archive fa-5x mb-3" aria-hidden="true"></i>
+                    <h5 class="card-title">Rechercher par spécialité</h5>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Médécin généraliste <span class="badge badge-primary badge-pill">14</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Pédiatre <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Cardiologue <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Ophtalmologue <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Dermatologue <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Ostéopathe <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Sage-femme <span class="badge badge-primary badge-pill">1</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Chirurgien urologue <span class="badge badge-primary badge-pill">1</span></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Toutes les spécialités</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

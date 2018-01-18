@@ -1,0 +1,86 @@
+<div class="jumbotron jumbotron-fluid py-5 mini_banner mb-0 bg-info">
+  <div class="container">
+    <div class="row">
+			<div class="col-md-5">
+				<p class="lead text-white mb-0">Affichage de 10 résultats</p>
+			</div>
+			<div class="col-md-7">
+          <%= form_with scope: :doctor, url: recherche_path, method: :get, local: true do |f|  %>
+              <div class="row">
+                  <div class="col-md-10 px-0">
+                      <div class="form-group">
+                           <%= f.text_field :mot_cle, class: "form-control supri-bordu", placeholder: "Entrer le nom d'un médecin ou clinique" %>
+                      </div>
+                  </div>
+                  <div class="col-md-2 px-0">
+                      <div class="form-group">
+                          <%= f.submit "Rechercher", class: "btn btn-primary  btn btn-block supri-bordu" %>
+                      </div>
+                  </div>
+              </div>
+          <% end %>
+			</div>
+		</div>
+  </div>
+</div>
+
+<section class="container-fluid bg-light py-3">
+	<div class="container">
+		<p class="mb-1">Type</p>
+		<ul class="nav nav-pills small">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="#">Active</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Link</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Link</a>
+		  </li>
+		</ul>
+	</div>
+
+	<hr>
+
+	<div class="container py-4">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-3 text-center">
+								<a href=""><%= image_tag "boy-2027768_640.png", class: "img-fluid rounded-cicle w-75", style: "border-radius: 50%"  %></a>
+							</div>
+							<div class="col-md-9">
+								<h5 class="font-weight-bold mb-0">Dr. Gaston CAKPO</h5>
+								<small>PEDIATRICIAN</small>
+								<p class="mt-3">L'adresse du médecin a cette endroit</p>
+								<p>ratting ici</p>
+
+							</div>
+						</div>
+					</div>
+					<hr class="m-0">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-3">
+
+							</div>
+							<div class="col-md-9 d-flex justify-content-between">
+								<p class="mb-0"><a href="">Voir sur la carte</a></p>
+								<p class="mb-0"><a href="" class="btn btn-primary btn-sm">Prendre un RDV</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-md-5">
+				<h3>map</h3>
+				<div class="w-100" id="map">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

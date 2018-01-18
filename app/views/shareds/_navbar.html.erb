@@ -1,0 +1,47 @@
+<!-- navbar-light bg-light -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="box-shadow: 0 2px 10px rgba(0,0,0,.3);">
+	<div class="container">
+		<%= link_to accueil_path, class: "navbar-brand font-weight-bold text-uppercase" do %>
+			<i class="fa fa-plus-square fa-lg d-inline-block align-center" aria-hidden="true"></i> Dototché
+		<% end %>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse collapse mt-3 mt-md-0" id="navbarsExample07">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active sr-only">
+					<a class="nav-link px-3" href="<%= accueil_path %>">Accueil <span class="sr-only">(current)</span></a>
+				</li>
+
+				<% if current_page?(accueil_path)  %>
+					<li class="nav-item">
+						<%= link_to "Vous êtes medécin ?", benefits_path, class: "nav-link px-3 btn btn-primary text-white"  %>
+					</li>
+				<% elsif current_page?(benefits_path)  %>
+					<li class="nav-item">
+						<a class="nav-link px-3" href="<%= accueil_path %>">Accueil <span class="sr-only">(current)</span></a>
+					</li>
+
+					<li class="nav-item">
+						<%= link_to "Comment ça marche ?", benefits_path, class: "nav-link px-3 active"  %>
+					</li>
+
+					<li class="nav-item">
+						<%= link_to "Tarifs", benefits_path, class: "nav-link px-3"  %>
+					</li>
+
+				<% end %>
+
+				<% if current_page?(benefits_path) %>
+					<li class="nav-item">
+						<%= link_to "Connexion", accueil_path, class: "ml-2 nav-link px-3 btn btn-primary text-white" %>
+					</li>
+				<% else  %>
+					<li class="nav-item">
+						<%= link_to "Connexion", accueil_path, class: "ml-2 nav-link px-3" %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</nav>
