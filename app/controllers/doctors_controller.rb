@@ -3,18 +3,20 @@ class DoctorsController < ApplicationController
     before_action :set_doctor, only: [:show, :edit, :update, :destroy]
 
 	def benefit
+
 	end
 
-    def index
-        if params[:search].present?
-            params[:search].inspect
-        else
-            @doctors = Doctor.all
-            @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
-            marker.lat doctor.latitude
-            marker.lng doctor.longitude
-        end
+  def index
+    if params[:search].present?
+        params[:search].inspect
+    else
+        @doctors = Doctor.all
+        @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
+        marker.lat doctor.latitude
+        marker.lng doctor.longitude
+      end
     end
+  end
 
   def show
 
@@ -58,3 +60,4 @@ class DoctorsController < ApplicationController
   end
 
 end
+
