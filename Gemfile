@@ -1,3 +1,5 @@
+ruby "2.4.3"
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -71,7 +73,7 @@ group :production do
   gem 'pg', '~> 0.18'
 end
 
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12.3'
 
