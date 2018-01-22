@@ -1,20 +1,22 @@
 class DoctorsController < ApplicationController
 
-    before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+    # before_action :set_doctor, only: [:show, :edit, :update, :destroy]
 
 	def benefit
 
 	end
 
   def index
-    if params[:search].present?
-        params[:search].inspect
+    if params[:lieu].present?
+        @doctors = Doctor.where(address: params[:lieu])
+        # @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
+        # marker.lat doctor.latitude
+        # marker.lng doctor.longitude
     else
         @doctors = Doctor.all
-        @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
-        marker.lat doctor.latitude
-        marker.lng doctor.longitude
-      end
+        # @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
+        # marker.lat doctor.latitude
+        # marker.lng doctor.longitude
     end
   end
 
@@ -23,17 +25,17 @@ class DoctorsController < ApplicationController
   end
 
   def new
-    @doctor = Doctor.new
+    # @doctor = Doctor.new
   end
 
   def create
-    @doctor = Doctor.new(doctor_params)
-    if @doctor.save
-      flash[:success] = "Doctor added!"
-      redirect_to root_path
-    else
-      render :nex
-    end
+    # @doctor = Doctor.new(doctor_params)
+    # if @doctor.save
+    #   flash[:success] = "Doctor added!"
+    #   redirect_to root_path
+    # else
+    #   render :nex
+    # end
   end
 
   def edit
@@ -48,7 +50,6 @@ class DoctorsController < ApplicationController
 
   end
 
-
   private
 
   def set_doctor
@@ -60,4 +61,3 @@ class DoctorsController < ApplicationController
   end
 
 end
-
