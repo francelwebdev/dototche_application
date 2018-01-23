@@ -1,3 +1,12 @@
+<% provide :page_title, "Resultat de recherche" %>
+
+
+<script src="//maps.google.com/maps/api/js?key=AIzaSyCtgANIAB9yJJCjMbqKedo_EO-09kCfVrM"></script>
+<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+<script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js'></script> <!-- only if you need custom infoboxes -->
+
+
+
 <div class="jumbotron jumbotron-fluid py-5 mini_banner mb-0 bg-info">
   <div class="container">
     <div class="row">
@@ -78,9 +87,19 @@
 			</div>
 			<div class="col-md-5">
 				<h3>map</h3>
-				<div class="w-100" id="map">
+				<div class="w-100 h-100" id="map">
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Pour gmap4rails -->
+<script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  });
+</script>
