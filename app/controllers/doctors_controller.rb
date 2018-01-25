@@ -7,13 +7,13 @@ class DoctorsController < ApplicationController
 	end
 
   def index
-    if params[:lieu].present?
-        @doctors = Doctor.where(address: params[:lieu])
+    if params[:city].blank?
+        @doctors = Doctor.all
         # @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
         # marker.lat doctor.latitude
         # marker.lng doctor.longitude
     else
-        @doctors = Doctor.all
+        @doctors = Doctor.search_doctor(params[:city])
         # @hash = Gmaps4rails.build_markers(@doctors) do |doctor, marker|
         # marker.lat doctor.latitude
         # marker.lng doctor.longitude

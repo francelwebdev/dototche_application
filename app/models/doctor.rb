@@ -3,11 +3,12 @@ class Doctor < ApplicationRecord
     geocoded_by :address
 	   after_validation :geocode, :if => :address_changed?
 
+    #  def self.search_doctor(city)
+    #   where("city = ? || address = ?", city, city)
+    # end
 
-     # def self.search_where(search)
-     #    where("address LIKE ?", "%#{search[lieu]}%")
-     # end
-
-    scope :search_where, -> { where(address: "%#{search[lieu]}%") }
+    scope :search_doctor, ->(city) { where("address = ?", city) }
 
 end
+
+# where("mot_cle = ? || address = ?", params[:mot_cle], params[:lieu] )

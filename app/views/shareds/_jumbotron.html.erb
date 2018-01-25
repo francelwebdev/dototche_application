@@ -7,8 +7,11 @@
 						<div class="col-12">
 								<%= form_with url: recherche_path, method: :get, local: true do |form|  %>
 									<div class="row px-1">
-											<div class="col-md-6 offset-md-2 px-0">
-												<%= form.text_field :lieu, label: false, required: true, placeholder: "Nom de votre ville ou quartier", class: 'form-control form-control-lg supri-bordu' %>
+											<!-- <div class="col-md-5 px-0">
+												<%= form.text_field :mot_cle, class: "form-control form-control-lg supri-bordu", placeholder: "Nom d'un médecin, clinique ou spécialité" %>
+											</div>
+ -->									<div class="col-md-6 offset-md-2 px-0">
+												<%= form.text_field :city, required: true, placeholder: "Nom de votre ville ou quartier. Ex: Agla, Zogbo, Fifadji", class: 'form-control form-control-lg supri-bordu' %>
 											</div>
 											<div class="col-md-2 px-0">
 												<%= form.submit "Rechercher", name: nil, class: 'btn btn-primary btn-lg btn btn-block supri-bordu' %>
