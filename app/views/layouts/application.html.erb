@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="fr">
   <head>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -54,7 +57,9 @@
 
     <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
-    <script>
+        <% if current_page?(accueil_path) %>
+
+            <script>
             $(document).ready(function(){
                 $('.center').slick({
                 dots: true,
@@ -85,6 +90,12 @@
                 });
             });
         </script>
+
+        <% elsif current_page?(benefice_path) %>
+            <%= yield :slick_ils_parlent_de_nous %>
+        <% else %>
+
+        <% end %>
 
     </body>
 </html>
