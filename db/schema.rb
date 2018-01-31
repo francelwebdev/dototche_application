@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122193121) do
+ActiveRecord::Schema.define(version: 20180130182203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.string "patient_first_name"
+    t.string "patient_second_name"
+    t.string "patient_email_address"
+    t.bigint "patient_phone_number"
+    t.text "patient_situation"
+    t.bigint "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+  end
 
   create_table "doctors", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,4 +35,5 @@ ActiveRecord::Schema.define(version: 20180122193121) do
     t.float "longitude"
   end
 
+  add_foreign_key "appointments", "doctors"
 end

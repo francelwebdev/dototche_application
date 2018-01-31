@@ -1,4 +1,4 @@
-ruby "2.4.3"
+ruby "2.5.0"
 
 source 'https://rubygems.org'
 
@@ -58,7 +58,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-#--- Mes gems ---#
+#--------------------------#
+#---------- MES GEMS ------#
+#--------------------------#
+
 group :development, :test do
   gem 'sqlite3'
 
@@ -76,8 +79,6 @@ end
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12.3'
-
-gem 'font-awesome-sass', '~> 4.7'
 
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 

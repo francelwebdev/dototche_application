@@ -58,7 +58,7 @@ GEM
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
     builder (3.2.3)
-    byebug (9.1.0)
+    byebug (10.0.0)
     callsite (0.0.11)
     capybara (2.17.0)
       addressable
@@ -94,8 +94,6 @@ GEM
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
     geocoder (1.4.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -143,13 +141,13 @@ GEM
     mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.11.1)
+    minitest (5.11.3)
     multi_json (1.13.1)
     nio4r (2.2.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    paperclip (5.2.0)
+    paperclip (5.2.1)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       cocaine (~> 0.5.5)
@@ -239,7 +237,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    uglifier (4.1.4)
+    uglifier (4.1.5)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -267,7 +265,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   devise-i18n (~> 1.4)
-  font-awesome-sass (~> 4.7)
   geocoder (~> 1.4, >= 1.4.5)
   gmaps4rails (~> 2.1, >= 2.1.2)
   high_voltage (~> 3.0)
@@ -295,7 +292,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.4.3p205
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
