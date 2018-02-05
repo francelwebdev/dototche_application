@@ -80,6 +80,8 @@ gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12.3'
 
+gem 'font-awesome-sass', '~> 4.7'
+
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'high_voltage', '~> 3.0'
@@ -99,7 +101,5 @@ gem 'geocoder', '~> 1.4', '>= 1.4.5'
 gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'
 
 gem 'hirb', '~> 0.7.3'
-
-gem 'rails_12factor'
 
 gem 'activerecord-postgresql-adapter', '~> 0.0.1'
